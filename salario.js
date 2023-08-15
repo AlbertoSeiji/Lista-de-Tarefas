@@ -1,5 +1,5 @@
 // criando o array de salários
-const salarios = [1500, 2200, 1000, 2500, 2300, 1900, 2800, 1700, 2650, 1950];
+const salarios = [1400, 2320, 1000, 2500, 2680, 1900, 2800, 1700, 2650, 2150];
 
 // usando o método map() para aplicar os aumentos de salário
 const salariosAumentados = salarios.map(salario => {
