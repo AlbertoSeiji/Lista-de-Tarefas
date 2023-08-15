@@ -12,15 +12,17 @@
 <body>
   <div class="Container">
     <h1>Lista de Tarefas</h1>
+
     <form id="taskForm">
       <label>Tarefa:</label>
-      <input id="tarefaInput" type="text" name="tarefa" placeholder="Nova tarefa"/>
+      <input id="tarefaInput" type="text" name="tarefa" placeholder="Nova tarefa" />
       <label>Descrição:</label>
-      <input id="descricaoInput" type="text" name="descricao" placeholder="Descrição da tarefa"/>
+      <input id="descricaoInput" type="text" name="descricao" placeholder="Descrição da tarefa" />
       <label>Autor:</label>
-      <input id="autorInput" type="text" name="autor" placeholder="De quem pertence a tarefa?"/>
+      <input id="autorInput" type="text" name="autor" placeholder="De quem pertence a tarefa?" />
       <label>Departamento:</label>
-      <input id="departamentoInput" type="text" name="departamento" placeholder="Qual departamento pertence?"/>
+      <input id="departamentoInput" type="text" name="departamento" placeholder="Qual departamento pertence?" />
+
       <label>Importância:</label>
       <select id="importanciaSelect">
         <option value="baixa">Baixa</option>
@@ -29,13 +31,17 @@
       </select>
       <button id="submitButton">Enviar</button>
     </form>
+
   </div>
+
   <div class="ListContainer">
     <h1>Tarefas a se fazer</h1>
+
     <div class="ListBox">
       <ul id="taskList"></ul>
     </div>
   </div>
+
 </body>
 
 </html>
