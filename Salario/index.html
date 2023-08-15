@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Salario</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>Aumento de Salários</title>
 </head>
 
 <body>
-    <button id="executarCodigo">Executar Código</button>
+    <div class="Container">
+        <h1>Aumento de Salários</h1>
+        <input type="number" id="novoSalario" placeholder="Digite o salário">
+        <button onclick="adicionarSalario()">Adicionar</button>
+        <ul id="listaSalarios"></ul>
+    </div>
+    <div class="Box">
+        <h2>Salários Acima de 2500:</h2>
+        <ul id="salariosAcima2500"></ul>
+        <button onclick="limparListas()">Limpar Listas</button>
+    </div>
 </body>
 
 </html>

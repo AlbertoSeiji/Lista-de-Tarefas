@@ -1,25 +1,55 @@
-// criando o array de salários
-const salarios = [1500, 2200, 1800, 2500, 2100, 1900, 2800, 1700, 2300, 1950];
+// array para armazenar os salarios
+const listaSalarios = [];
+const listaSalariosAcima2500 = [];
 
-// usando o método map() para aplicar os aumentos de salário
-const salariosAumentados = salarios.map(salario => {
+// funcao para adicionar o valor inserido no input na array
+function adicionarSalario() {
+  const novoSalario = parseFloat(document.getElementById("novoSalario").value);
+  // caso nao for numero ele nao aceita o valor inserido (NaN = not-a-number)
+  if (!isNaN(novoSalario)) {
+    const salarioComAumento = calcularAumento(novoSalario);
+    listaSalarios.push({ original: novoSalario, aumento: salarioComAumento });
+    atualizarListaSalarios();
+    if (salarioComAumento > 2500) {
+      listaSalariosAcima2500.push(salarioComAumento);
+      atualizarListaSalariosAcima2500();
+    }
+    document.getElementById("novoSalario").value = "";
+  }
+}
+
+function atualizarListaSalarios() {
+  const listaSalariosElement = document.getElementById("listaSalarios");
+  listaSalariosElement.innerHTML = "";
+  listaSalarios.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = `Salário original: ${item.original.toFixed(2)} | Salário com aumento: ${item.aumento.toFixed(2)}`;
+    listaSalariosElement.appendChild(li);
+  });
+}
+
+// funçao para realizar o aumento de acordo com o valor inserido ser maior ou menor que 2000
+function calcularAumento(salario) {
   if (salario <= 2000) {
-    // aumento de 15%
     return salario * 1.15;
   } else {
-    // aumento de 10%
     return salario * 1.10;
   }
-});
+}
 
-// usando o método filter() para filtrar os salários acima de 2500
-const salariosSuperiores2500 = salariosAumentados.filter(salario => salario > 2500);
+function atualizarListaSalariosAcima2500() {
+  const salariosAcima2500Element = document.getElementById("salariosAcima2500");
+  salariosAcima2500Element.innerHTML = "";
+  listaSalariosAcima2500.forEach(salario => {
+    const li = document.createElement("li");
+    li.textContent = salario.toFixed(2);
+    salariosAcima2500Element.appendChild(li);
+  });
+}
 
-// usando o método reduce() para somar os salários
-const totalSalarios = salariosAumentados.reduce((acumulador, salario) => acumulador + salario, 0);
-
-// mostrar os valores
-console.log("Salários originais:", salarios);
-console.log("Salários com aumentos:", salariosAumentados);
-console.log("Salários acima de 2500:", salariosSuperiores2500);
-console.log("Total de salários:", totalSalarios);
+function limparListas() {
+  listaSalarios.length = 0;
+  listaSalariosAcima2500.length = 0;
+  atualizarListaSalarios();
+  atualizarListaSalariosAcima2500();
+}
