@@ -80,13 +80,13 @@ document.addEventListener('DOMContentLoaded', function () {
         adicionarDuracaoButton.textContent = 'Adicionar Duração';
         // funcionalidade do botao
         adicionarDuracaoButton.addEventListener('click', function () {
-            // criando o texto em cima da area onde sera colocada a duraçao da tarefa
+            // criando a area onde sera colocada a duraçao da tarefa
             const novaDuracao = prompt('Digite a nova duração:');
             if (novaDuracao !== null) {
                 // deixar a "Duraçao" escrito em negrito
                 const duracaoElement = document.createElement('strong');
                 duracaoElement.textContent = 'Duração:';
-                // criando a area onde vai ser digitada a duraçao da tarefa
+                // criando o valor digitado
                 const duracaoValue = document.createTextNode(` ${novaDuracao}`);
                 // criando a div que ira englobar a duraçao na li
                 const duracaoContainer = document.createElement('div');
