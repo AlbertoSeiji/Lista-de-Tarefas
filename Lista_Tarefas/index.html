@@ -22,7 +22,6 @@
       <input id="autorInput" type="text" name="autor" placeholder="De quem pertence a tarefa?" />
       <label>Departamento:</label>
       <input id="departamentoInput" type="text" name="departamento" placeholder="Qual departamento pertence?" />
-
       <label>Importância:</label>
       <select id="importanciaSelect">
         <option value="baixa">Baixa</option>
@@ -31,15 +30,16 @@
       </select>
       <button id="submitButton">Enviar</button>
     </form>
-
   </div>
 
   <div class="ListContainer">
     <h1>Tarefas a se fazer</h1>
+    <button id="sortButton">Ordenar por Importância</button>
 
     <div class="ListBox">
       <ul id="taskList"></ul>
     </div>
+    
   </div>
 
 </body>

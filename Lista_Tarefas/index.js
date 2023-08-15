@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // adiciona um evento ao formulário para lidar com o envio
     taskForm.addEventListener('submit', function (event) {
-        // Impede o comportamento padrão do formulário
+        // impede o comportamento padrão do formulário
         event.preventDefault();
 
         // obtém os valores dos campos do formulário pelo id
