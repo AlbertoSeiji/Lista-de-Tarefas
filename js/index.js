@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const departamentoInput = document.getElementById('departamentoInput');
         const importanciaSelect = document.getElementById('importanciaSelect');
 
-        // obtem os valores dos inputs de diferentes lugares, removendo os espaçoes em branco
+        // *** // obtem os valores dos inputs de diferentes lugares, removendo os espaçoes em branco
         const tarefa = tarefaInput.value.trim();
         const descricao = descricaoInput.value.trim();
         const autor = autorInput.value.trim();
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <strong>Importância:</strong> ${importancia}
         `;
 
-        // cria botões para adicionar valor, duração à tarefa e remover tarefa
+        /// *** // cria botões para adicionar valor, duração à tarefa e remover tarefa
         // criando o botao para adicionar valor a tarefa
         const adicionarValorButton = document.createElement('button');
         // texto para o botao
