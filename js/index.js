@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 valorContainer.appendChild(valorElement);
                 valorContainer.appendChild(valorValue);
                 detailsContainer.appendChild(valorContainer);
-                // stualizar a variável para indicar que o valor já foi adicionado
+                // atualizar a variável para indicar que o valor já foi adicionado
                 valorAdicionado = true;
                 // desativar o botão de adicionar valor
                 adicionarValorButton.disabled = true;
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // criando o botao de adicionar a duraçao na tarefa
         const adicionarDuracaoButton = document.createElement('button');
-        //  texto para o botao
+        // texto para o botao
         adicionarDuracaoButton.textContent = 'Adicionar Duração';
         // funcionalidade do botao
         adicionarDuracaoButton.addEventListener('click', function () {
